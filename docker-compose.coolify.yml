@@ -20,9 +20,10 @@ services:
       PORT: "3100"
       SERVE_UI: "true"
       PAPERCLIP_DEPLOYMENT_MODE: "authenticated"
-      PAPERCLIP_DEPLOYMENT_EXPOSURE: "private"
+      PAPERCLIP_DEPLOYMENT_EXPOSURE: "public"
       PAPERCLIP_PUBLIC_URL: "https://${SERVICE_FQDN_SERVER}"
       BETTER_AUTH_SECRET: "${SERVICE_PASSWORD_64_BETTERAUTH}"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:?}"
       SERVICE_FQDN_SERVER_3100:
     volumes:
       - paperclip-data:/paperclip
